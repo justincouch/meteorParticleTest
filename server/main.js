@@ -14,8 +14,8 @@ Meteor.startup(() => {
   var particle = new Particle();
 
   var particleLogin = particle.login({
-    username: 'cd@continuuminnovation.com',
-    password: 'connecteddevices'
+    username: 'USERNAME',
+    password: 'PASSWORD'
   });
 
   particleLogin.then(function (data) {
@@ -24,7 +24,7 @@ Meteor.startup(() => {
     }).then(function (token) {
         console.log(token);
         return particle.getEventStream({
-            deviceId: '1d003d000847353138383138',
+            deviceId: 'DEVICEID',
             auth: token
         });
     }).then( function (stream) {
