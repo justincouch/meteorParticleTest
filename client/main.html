@@ -5,21 +5,27 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
-  {{> info}}
+  {{> data}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="data">
+  <h2>Test</h2>
+  {{#each datas}}
+    <h2>{{published_at}}</h2>
+
+    {{> data_props}}
+
+    <p>Paricle ID: {{coreid}}</p>
+    <p>TTL: {{ttl}}</p>
+  {{/each}}
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="data_props">
+  {{#each props}}
+    <p>
+    {{key}}
+     : 
+    {{value}}
+    </p>
+  {{/each}}
 </template>
