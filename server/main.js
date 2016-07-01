@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/db.js';
 
+
 var data_to_insert = [];
 
 Meteor.startup(() => {
@@ -14,8 +15,8 @@ Meteor.startup(() => {
   var particle = new Particle();
 
   var particleLogin = particle.login({
-    username: 'USERNAME',
-    password: 'PASSWORD'
+    username: 'cd@continuuminnovation.com',
+    password: 'connecteddevices'
   });
 
   particleLogin.then(function (data) {
@@ -24,7 +25,7 @@ Meteor.startup(() => {
     }).then(function (token) {
         console.log(token);
         return particle.getEventStream({
-            deviceId: 'DEVICEID',
+            deviceId: '1d003d000847353138383138',
             auth: token
         });
     }).then( function (stream) {
