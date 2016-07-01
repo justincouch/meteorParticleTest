@@ -1,1 +1,47 @@
 /* CSS declarations go here */
+body{
+  font-family: "Human-Sans", "Helvetica", "Arial", "sans-serif";
+}
+
+h2{
+  font-size: 14px;
+}
+
+p{
+  font-size: 10px;
+  line-height: 0.5em;
+}
+
+#lineChart .axisTemp path{
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#lineChart .axisLight path{
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#lineChart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#lineChart .x.axis path {
+  display: none;
+}
+
+#lineChart .TempLine {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#lineChart .LightLine {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}

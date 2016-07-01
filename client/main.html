@@ -1,17 +1,30 @@
 <head>
   <title>mp</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
 </head>
 
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> data}}
+  {{> lineChart }}
+  {{> data }}
 </body>
 
+<template name="lineChart">
+  <h4>Line Chart - 
+    <small><a href="http://bl.ocks.org/mbostock/3883245">View Original</a></small>
+    <small><a href="https://github.com/nate-strauser/meteor-cookbook/tree/master/d3/d3-example/client/line">Meteor Version on Github</a></small>
+  </h4>
+    <svg id="lineChart">
+    </svg>
+    <!-- <input type="button" id="add" value="Add a Value" />
+    <input type="button" id="remove" value="Remove a Value" />
+    <input type="button" id="randomize" value="Randomize Values" /> -->
+</template>
+
 <template name="data">
-  <h2>Test</h2>
   {{#each datas}}
-    <h2>{{published_at}}</h2>
+    <h4>{{published_at}}</h4>
 
     {{> data_props}}
 
