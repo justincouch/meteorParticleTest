@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/db.js';
+import { CRED } from '..credentials.config.js';
 
 var data_to_insert = [];
 
