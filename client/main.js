@@ -49,10 +49,12 @@ Template.lineChart.rendered = function(){
     .range([0, width]);
 
   var yTemp = d3.scale.linear()
-    .range([height, 0]);
+    .range([height, 0])
+    .domain([20,25]);
 
   var yLight = d3.scale.linear()
-    .range([height, 0]);
+    .range([height, 0])
+    .domain([0,1]);
 
   var xAxis = d3.svg.axis()
     .scale(x)
@@ -128,9 +130,9 @@ Template.lineChart.rendered = function(){
 
     x.domain(d3.extent(dataset, function(d) { return d.published_at; }));
     
-    yTemp.domain(d3.extent(dataset, function(d) { return d.data["1"]; }));
+    //yTemp.domain(d3.extent(dataset, function(d) { return d.data["1"]; }));
 
-    yLight.domain(d3.extent(dataset, function(d) { return d.data["2"]; }));
+    //yLight.domain(d3.extent(dataset, function(d) { return d.data["2"]; }));
 
     //Update X axis
     svg.select(".x.axis")
