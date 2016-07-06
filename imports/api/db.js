@@ -3,6 +3,7 @@ import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 
 export const DATA_DB = new Mongo.Collection('data_db');
+export const DEVICE_DB = new Mongo.Collection('device_db');
 
 // if ( Meteor.isServer ){
 //   Meteor.publish('data_db', function dbPublication() {
