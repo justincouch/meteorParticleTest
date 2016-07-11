@@ -40,3 +40,5 @@ jspm_packages
 # Credential config files
 .config
 .config.js
+
+credentials.config.js
